@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dont Waste Your Money',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: kPinkColor,
-        fontFamily: "DMSans",
+        scaffoldBackgroundColor: kPinkColor,
       ),
       home: WellcomeScreen(),
     );
