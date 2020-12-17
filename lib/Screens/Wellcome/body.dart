@@ -1,3 +1,4 @@
+import 'package:dontWasteMoney/Screens/LoginPage/body.dart';
 import 'package:dontWasteMoney/components/rounded_button.dart';
 import 'package:dontWasteMoney/components/simple_text.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
@@ -40,7 +41,16 @@ class WellcomeScreen extends StatelessWidget {
             ),
             RoundedButton(
               text: 'Continue',
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginPage();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),
