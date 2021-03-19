@@ -59,6 +59,50 @@ class DashboardScreen extends StatelessWidget {
                 letterSpacing: 1,
               ),
             ),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: size.height * 0.07,
+                  width: size.width * 0.2,
+                  decoration: BoxDecoration(
+                    color: kPinkColor,
+                    borderRadius: BorderRadius.circular(45.0),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Icon(Icons.arrow_upward_outlined),
+                  ),
+                ),
+                Container(
+                  height: size.height * 0.07,
+                  width: size.width * 0.2,
+                  decoration: BoxDecoration(
+                    color: kPinkColor,
+                    borderRadius: BorderRadius.circular(45.0),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Icon(Icons.arrow_upward_outlined),
+                  ),
+                ),
+                Container(
+                  height: size.height * 0.07,
+                  width: size.width * 0.14,
+                  decoration: BoxDecoration(
+                    color: kPinkColor,
+                    borderRadius: BorderRadius.circular(55.0),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Icon(Icons.arrow_upward_outlined),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

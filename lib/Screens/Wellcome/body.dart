@@ -9,6 +9,7 @@ class WellcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -35,7 +36,9 @@ class WellcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            MainHeader(text: 'Dont waste money',),
+            MainHeader(
+              text: 'Dont waste money',
+            ),
             SizedBox(
               height: size.height * 0.03,
             ),
