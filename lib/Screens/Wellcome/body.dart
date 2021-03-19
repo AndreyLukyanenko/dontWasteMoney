@@ -25,10 +25,13 @@ class WellcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Image.asset(
-                "assets/images/grow-your-money.png",
-                height: size.height * 0.5,
-                width: size.width * 0.7,
+              child: Hero(
+                tag: "mainicon",
+                child: Image.asset(
+                  "assets/images/grow-your-money.png",
+                  height: size.height * 0.5,
+                  width: size.width * 0.7,
+                ),
               ),
             ),
             MainHeader(),
