@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AlreadyHeaveAnAccountCheck extends StatelessWidget {
-  final bool login;
+  final String text;
   final Function press;
+  final String signText;
   const AlreadyHeaveAnAccountCheck({
     Key key,
-    this.login = true,
     this.press,
+    this.text,
+    this.signText,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class AlreadyHeaveAnAccountCheck extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          login ? "Don't have a Account ? " : "Already have an Account ? ",
+          text,
           style: TextStyle(
             color: Colors.grey[500],
           ),
@@ -23,7 +25,7 @@ class AlreadyHeaveAnAccountCheck extends StatelessWidget {
         GestureDetector(
           onTap: press,
           child: Text(
-            login ? 'Sign up' : 'Sign in',
+            signText,
             style: TextStyle(
               color: Colors.black,
             ),

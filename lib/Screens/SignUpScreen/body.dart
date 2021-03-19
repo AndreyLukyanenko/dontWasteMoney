@@ -1,11 +1,11 @@
-import 'package:dontWasteMoney/Screens/LoginScreen/body.dart';
+import 'package:dontWasteMoney/components/already_have_account.dart';
+import 'package:dontWasteMoney/components/input_text_field.dart';
 import 'package:dontWasteMoney/components/rounded_button.dart';
-import 'package:dontWasteMoney/components/simple_text.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
 import 'package:flutter/material.dart';
 
-class WellcomeScreen extends StatelessWidget {
-  static const String route = '/home';
+class SignUpScreen extends StatelessWidget {
+  static String route = "/sign_up";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -15,6 +15,7 @@ class WellcomeScreen extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Container(
+        width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -27,33 +28,45 @@ class WellcomeScreen extends StatelessWidget {
           children: [
             Center(
               child: Hero(
-                tag: "mainicon",
+                tag: 'mainicon',
                 child: Image.asset(
                   "assets/images/grow-your-money.png",
-                  height: size.height * 0.5,
-                  width: size.width * 0.7,
+                  height: size.height * 0.2,
+                  width: size.width * 0.3,
                 ),
               ),
             ),
-            MainHeader(text: 'Dont waste money',),
+            MainHeader(
+              text: 'Dont waste money',
+            ),
             SizedBox(
               height: size.height * 0.03,
             ),
-            SimpleText(),
+            InputTextField(
+              hintText: 'Login',
+              onPress: () {},
+            ),
             SizedBox(
-              height: size.height * 0.10,
+              height: size.height * 0.03,
+            ),
+            InputTextField(
+              hintText: 'Password',
+              onPress: () {},
+            ),
+            SizedBox(
+              height: size.height * 0.02,
             ),
             RoundedButton(
-              text: 'Continue',
+              text: 'Sign Up',
+            ),
+            SizedBox(
+              height: size.height * 0.01,
+            ),
+            AlreadyHeaveAnAccountCheck(
+              text: 'Already have an account ?',
+              signText: 'Sign In',
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, "/login");
               },
             ),
           ],

@@ -4,7 +4,8 @@ import 'package:dontWasteMoney/components/rounded_button.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
+  static String route = "/login";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,7 +36,9 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            MainHeader(),
+            MainHeader(
+              text: 'Dont waste money',
+            ),
             SizedBox(
               height: size.height * 0.03,
             ),
@@ -59,7 +62,13 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: size.height * 0.01,
             ),
-            AlreadyHeaveAnAccountCheck(),
+            AlreadyHeaveAnAccountCheck(
+              text: 'Dont have an account? ',
+              signText: 'Sign Up',
+              press: () {
+                Navigator.pushNamed(context, "/sign_up");
+              },
+            ),
           ],
         ),
       ),

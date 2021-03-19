@@ -1,17 +1,18 @@
 import 'package:dontWasteMoney/constans.dart';
 import 'package:flutter/material.dart';
 
-class MainHeader extends StatefulWidget {
-  @override
-  _MainHeaderState createState() => _MainHeaderState();
-}
+class MainHeader extends StatelessWidget {
+  final String text;
+  const MainHeader({
+    Key key,
+    @required this.text,
+  }) : super(key: key);
 
-class _MainHeaderState extends State<MainHeader> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        "Dont Waste Your Money",
+        text,
         style: TextStyle(
           color: kBlackColor,
           fontWeight: FontWeight.bold,
