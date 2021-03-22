@@ -1,5 +1,8 @@
+import 'package:dontWasteMoney/components/top_circular_icon.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
+import 'package:dontWasteMoney/components/top_rounded_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../constans.dart';
 
@@ -60,48 +63,35 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: size.height * 0.05,
+              height: size.height * 0.06,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  height: size.height * 0.07,
-                  width: size.width * 0.2,
-                  decoration: BoxDecoration(
-                    color: kPinkColor,
-                    borderRadius: BorderRadius.circular(45.0),
-                  ),
-                  child: GestureDetector(
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0, left: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TopRoundedIcon(
+                    size: size,
+                    icon: Icon(Icons.arrow_upward_outlined),
+                    text: Text('Today'),
                     onTap: () {},
-                    child: Icon(Icons.arrow_upward_outlined),
-                  ),
-                ),
-                Container(
-                  height: size.height * 0.07,
-                  width: size.width * 0.2,
-                  decoration: BoxDecoration(
                     color: kPinkColor,
-                    borderRadius: BorderRadius.circular(45.0),
                   ),
-                  child: GestureDetector(
+                  TopRoundedIcon(
+                    size: size,
+                    icon: Icon(Icons.arrow_downward_outlined),
+                    text: Text('Total'),
+                    border: Border.all(color: kGreyColor),
+                    color: kWhiteColor,
                     onTap: () {},
-                    child: Icon(Icons.arrow_upward_outlined),
                   ),
-                ),
-                Container(
-                  height: size.height * 0.07,
-                  width: size.width * 0.14,
-                  decoration: BoxDecoration(
-                    color: kPinkColor,
-                    borderRadius: BorderRadius.circular(55.0),
-                  ),
-                  child: GestureDetector(
+                  TopCircularIcon(
+                    size: size,
+                    color: kGreyColor,
                     onTap: () {},
-                    child: Icon(Icons.arrow_upward_outlined),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

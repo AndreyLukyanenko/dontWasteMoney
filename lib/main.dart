@@ -3,7 +3,7 @@ import 'package:dontWasteMoney/Screens/LoginScreen/body.dart';
 import 'package:dontWasteMoney/Screens/SignUpScreen/body.dart';
 import 'package:dontWasteMoney/constans.dart';
 import 'package:flutter/material.dart';
-import 'Screens/Wellcome/body.dart';
+import 'Screens/Wellcome_screen/body.dart';
 
 void main() {
   runApp(MyApp());
