@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'Screens/Wellcome_screen/body.dart';
 
 void main() {
+  // FIXME: MyApp дефолт и лучше переименовать
   runApp(MyApp());
 }
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'DM Sans',
       ),
       home: DashboardScreen(),
+      // Держи рауты в другом месте, лучше в отдельном файле.
       routes: {
         WellcomeScreen.route: (context) => WellcomeScreen(),
         LoginScreen.route: (context) => LoginScreen(),
