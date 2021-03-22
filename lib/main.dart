@@ -6,16 +6,15 @@ import 'package:flutter/material.dart';
 import 'Screens/Wellcome_screen/body.dart';
 
 void main() {
-  // FIXME: MyApp дефолт и лучше переименовать
-  runApp(MyApp());
+  runApp(DontWasteMoneyApp());
 }
 
-class MyApp extends StatelessWidget {
+class DontWasteMoneyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Dont Waste Your Money',
+      title: "Don't Waste Your Money",
       theme: ThemeData(
         scaffoldBackgroundColor: kPinkColor,
         primaryColor: kWhiteColor,

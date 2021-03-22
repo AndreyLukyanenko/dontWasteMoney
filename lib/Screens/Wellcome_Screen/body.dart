@@ -4,8 +4,7 @@ import 'package:dontWasteMoney/components/simple_text.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
 import 'package:flutter/material.dart';
 
-// Welcome, а не Wellcome :)
-class WellcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
   static const String route = '/home';
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class WellcomeScreen extends StatelessWidget {
               ),
             ),
             MainHeader(
-              text: 'Dont waste money', // Используй " для того чтобы было возможно ставить апостроф.
+              text: "Don't waste money",
             ),
             SizedBox(
               height: size.height * 0.03,
