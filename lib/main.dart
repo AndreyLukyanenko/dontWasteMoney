@@ -23,7 +23,7 @@ class DontWasteMoneyApp extends StatelessWidget {
       home: DashboardScreen(),
       // Держи рауты в другом месте, лучше в отдельном файле.
       routes: {
-        WellcomeScreen.route: (context) => WellcomeScreen(),
+        WelcomeScreen.route: (context) => WelcomeScreen(),
         LoginScreen.route: (context) => LoginScreen(),
         SignUpScreen.route: (context) => SignUpScreen(),
         DashboardScreen.route: (context) => DashboardScreen(),

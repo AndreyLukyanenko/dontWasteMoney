@@ -1,8 +1,9 @@
+import 'package:dontWasteMoney/components/budget_list_item.dart';
+import 'package:dontWasteMoney/components/floating_action_button.dart';
 import 'package:dontWasteMoney/components/top_circular_icon.dart';
 import 'package:dontWasteMoney/components/text_header.dart';
 import 'package:dontWasteMoney/components/top_rounded_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../constans.dart';
 
@@ -12,6 +13,9 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      floatingActionButton: FloatingButton(
+        onPressed: () {},
+      ),
       backgroundColor: kWhiteColor,
       appBar: AppBar(
         backgroundColor: kWhiteColor,
@@ -93,9 +97,21 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: size.height * 0.06,
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  BudgetListItem(size: size)
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+
